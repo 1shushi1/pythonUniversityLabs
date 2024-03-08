@@ -66,12 +66,15 @@ def devisionByZeroChecker():
     elif operation == "-":
         result = num1 - num2
     elif operation == "*":
-        result = num1*num2
+        result = num1 * num2
     elif operation == "/":
-        if num1 != 0 or num2 != 0:
-            result = num1/num2
-        else :
+        if num2 != 0:
+            result = num1 / num2
+        else:
             print("You cannot divide by zero")
-    else: print("Invalid operation")
-    print("The result :", round(result, 2))
+            return
+    else:
+        print("Invalid operation")
+        return
+    print("The result:", round(result, 2))
 devisionByZeroChecker()
